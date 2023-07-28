@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+    <title>CodePen - Resume stuff</title>
+      <link rel="canonical" href="https://codepen.io/mavrK/pen/PzGvdJ">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  
+    
+    
+  <style>
+  * {
+    box-sizing: border-box;
+    transition: 0.35s ease;
+  }
+  .rela-block {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: ;
+    left: ;
+    right: ;
+    bottom: ;
+  }
+  .rela-inline {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    top: ;
+    left: ;
+    right: ;
+    bottom: ;
+  }
+  .floated {
+    display: inline-block;
+    position: relative;
+    margin: false;
+    top: ;
+    left: ;
+    right: ;
+    bottom: ;
+    float: left;
+  }
+  .abs-center {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: 50%;
+    left: 50%;
+    right: false;
+    bottom: false;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 88%;
+  }
+  body {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 28px;
+    background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right no-repeat;
+    background-size: cover;
+  }
+  body:before {
+    content: "";
+    display: false;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.92);
+  }
+  .caps {
+    text-transform: uppercase;
+  }
+  .justified {
+    text-align: justify;
+  }
+  p.light {
+    color: #777;
+  }
+  h2 {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #000;
+  }
+  h3 {
+    font-family: 'Open Sans';
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #000;
+  }
+  .page {
+    
+    max-width: 100%;
+    margin: 0px auto;
+    background-color: #fff;
+    box-shadow: 6px 10px 28px 0px rgba(0,0,0,0.4);
+  }
+  .top-bar {
+    height: 220px;
+    background-color: #848484;
+    color: #fff;
+  }
+  .name {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: false;
+    left: calc(350px + 5%);
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 58px;
+    letter-spacing: 8px;
+    font-weight: 100;
+    line-height: 60px;
+  }
+  .name div {
+    width: 94%;
+  }
+  .side-bar {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: 20px;
+    left: 5%;
+    right: false;
+    bottom: 0;
+    width: auto;
+    background-color: #f7e0c1;
+    padding: 250px 30px 50px;
+  }
+  .mugshot {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: 50px;
+    left: 70px;
+    right: false;
+    bottom: false;
+    height: 210px;
+    width: 210px;
+  }
+  .mugshot .logo {
+    margin: -23px;
+  }
+  .logo {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: 0;
+    left: 0;
+    right: false;
+    bottom: false;
+    z-index: 100;
+    margin: 0;
+    color: #000;
+    height: 220px;
+    width: 220px;
+  }
+  .logo .logo-svg {
+    height: 100%;
+    width: 100%;
+    stroke: #000;
+    cursor: pointer;
+  }
+  .logo .logo-text {
+    display: false;
+    position: absolute;
+    margin: false;
+    top: 58%;
+    left: ;
+    right: 16%;
+    bottom: ;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 55px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 58.333333333333336px;
+  }
+  .social {
+    padding-left: 60px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .social:before {
+    content: "";
+    display: false;
+    position: absolute;
+    margin: false;
+    top: -4px;
+    left: 10px;
+    right: false;
+    bottom: false;
+    height: 35px;
+    width: 35px;
+    background-size: cover !important;
+  }
+  .social.twitter:before {
+    background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png") center no-repeat;
+  }
+  .social.pinterest:before {
+    background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
+  }
+  .social.linked-in:before {
+    background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png") center no-repeat;
+  }
+  .social.github:before {
+    background: url("./gihub.png") center no-repeat;
+  }
+  .social.discord:before {
+    background: url("./discord.png") center no-repeat;
+  }
+  .social.instagram:before {
+    background: url("./instagram.png") center no-repeat;
+  }
+  .social.gmail:before {
+    background: url("./gmail.png") center no-repeat;
+  }
+  .side-header {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 50px auto 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #888;
+  }
+  .list-thing {
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+  .content-container {
+    margin-right: 0;
+    width: calc(95% - 350px);
+    padding: 25px 40px 50px;
+  }
+  .content-container > * {
+    margin: 0 auto 25px;
+  }
+  .content-container > h3 {
+    margin: 0 auto 5px;
+  }
+  .content-container > p.long-margin {
+    margin: 0 auto 50px;
+  }
+  .title {
+    width: 80%;
+    text-align: center;
+  }
+  .separator {
+    width: 240px;
+    height: 2px;
+    background-color: #999;
+  }
+  .greyed {
+    background-color: #ddd;
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  @media screen and (max-width: 1150px) {
+    .name {
+      color: #fff;
+      font-family: 'Raleway';
+      font-size: 38px;
+      letter-spacing: 6px;
+      font-weight: 100;
+      line-height: 48px;
+    }
+  }
+  a {
+       text-decoration: none;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+.list-thing{
+    font-size: 12px;
+    line-height: 1;
+}
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+  </head>
+  
+  <body>
+    <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  
+  <!-- PAGE STUFF -->
+  <div class="rela-block page">
+      <div class="rela-block top-bar">
+          <div class="caps name"><div class="abs-center">Rafael Alves</div></div>
+      </div>
+      <div class="side-bar">
+          <div class="mugshot">
+              <div style="background-image: url('./eu.jpg');background-size: cover;background-repeat: no-repeat;" class="logo">
+                  
+                  <p class="logo-text"></p>
+              </div>
+          </div>
+    
+          <p>Natal - RN / Brasil</p>
+          <p>surrealdevelopers@gmail.com</p>
+          <div style="display: flex;justify-content: space-evenly;align-items: center; align-content: center;margin-bottom: -20px;">
+            <a href="https://www.linkedin.com/in/rafael-alves-felipe/" target="_blank" style="text-decoration: none;"> <p style="text-decoration: none;" class="rela-block social linked-in"></p></a> 
+            <a href="https://github.com/mard145" target="_blank" style="text-decoration: none;"> <p style="text-decoration: none;" class="rela-block social github"></p></a> 
+            <a href="https://discord.gg/gVfH3ZzT" target="_blank" style="text-decoration: none;"> <p style="text-decoration: none;" class="rela-block social discord"></p></a> 
+            <a href="https://www.instagram.com/rafas2alves/" target="_blank" style="text-decoration: none;"> <p style="text-decoration: none;" class="rela-block social instagram"></p></a> 
+            <a href="mailto:surrealdevelopers@gmail.com"  target="_blank" style="text-decoration: none;"> <p style="text-decoration: none;" class="rela-block social gmail"></p></a> 
+
+        </div>
+          
+          <p class="rela-block caps side-header">Expertise</p>
+          <p class="rela-block list-thing">Node.js - 4 Years</p>
+          <p class="rela-block list-thing">JavaScript - 5 Years</p>
+          <p class="rela-block list-thing">React - 3 Years</p>
+          <p class="rela-block list-thing">React Native - 2 Years</p>
+          <p class="rela-block list-thing">Redux - 2 Years</p>
+          <p class="rela-block list-thing">Mongoose ( MongoDB) - 3 Years</p>
+          <p class="rela-block list-thing">Sequelize ( MySQL, SQLite, PostgreSQL ) - 3 Years</p>
+          <p class="rela-block list-thing">Firebase and Firestorage - 2 Years</p>
+          <p class="rela-block list-thing">HTML5 - 5 Years</p>
+          <p class="rela-block list-thing">CSS3 - 5 Years</p>
+          <p class="rela-block list-thing">Bootstrap - 4 Years</p>
+          <p class="rela-block list-thing">Jquery - 4 Years</p>
+          <p class="rela-block list-thing">Express - 4 Years</p>
+          <p class="rela-block list-thing">Socket.io - 3 Years</p>
+          <p class="rela-block list-thing">Electron.js - 2 Years</p>
+          <p class="rela-block list-thing">Puppeteer - 3 Years</p>
+          <p class="rela-block list-thing">Three.js - 2 Years</p>
+          <p class="rela-block list-thing">D3.js - 2 Years</p>
+          <p class="rela-block list-thing">Axios - 3 Years</p>
+          <p class="rela-block list-thing">Git - 3 Years</p>
+          <p class="rela-block list-thing">JWT ( JSON Web Token) - 2 Years</p>
+          <p class="rela-block list-thing">Web3.js - 1 Years</p>
+          <p class="rela-block list-thing">Wordpress - 6 Years</p>
+          <p class="rela-block list-thing">API Rest Full - 4 Years</p>
+          <p class="rela-block list-thing">Coingecko - 1 Years</p>
+          <p class="rela-block list-thing">SEO - 4 Years</p>
+          <p class="rela-block list-thing">React-Three-Fiber - 1 Years</p>
+
+          <p class="rela-block caps side-header" style="margin:0px;">Education</p>
+          <p class="rela-block list-thing" style="margin-top: 10px;">Incomplete higher education in <a style="text-decoration: none;color: black;" href="https://unp.br/" target="_blank">UNP</a></p>
+         
+      </div>
+      <div class="rela-block content-container">
+          <h2 class="rela-block caps title">FullStack Node.js</h2>
+          <div class="rela-block separator"></div>
+          <div class="rela-block caps greyed">Profile</div>
+          <p class="long-margin">My name is Rafael Alves, at the moment I'm a Freelancer, I've participated in several projects and completed several jobs, I love coding, I believe that with it we can create whatever we imagine, making working with application coding become something dynamic. My specialty is working with Node.js, like EcmaScript or Javascript, both in the back and in the front-end. Node.js allows us to build any type of application, a powerful tool that allows and challenges you to use your creativity in building applications</p>
+          <div class="rela-block caps greyed">Experience</div>
+  
+          <h3>#1</h3>
+          <a href="https://www.linkedin.com/company/hexlibrium/" target="_blank"><p class="light">Hexlibrium</p></a>
+          <p class="justified">At Hexlibrium I started in 2018 and finished with them in 2022. I used technologies such as: Node.js, D3.js, Three.js, Socket.io, HTML, CSS, Javascript, Web3.js, JWT, Express.js, React. js, among other technologies.</p>
+          
+          <h3>#2</h3>
+         <a href="https://www.linkedin.com/company/agcentralcriativa/" target="_blank"><p class="light">Central Criativa</p></a> 
+          <p class="justified">At Creative Center I started in 2019 and finished with them in 2020. I used technologies such as: Wordpress, Javascript, CSS, HTML, NPM, among other technologies.</p>
+          
+          <h3>#3</h3>
+          <p class="light">Freelancer</p>
+          <p class="justified">I currently work as a freelancer working in various technologies, libraries and frameworks including: Bootstrap, Jquery, D3.js, Three.js, Chart.js, among other technologies.</p>
+      </div>
+  </div>
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script id="rendered-js">
+  // Some assembly required, batteries sold separately
+  
+  // Inspiration
+  // https://www.pinterest.com/pin/556687203921295406/
+  //# sourceURL=pen.js
+      </script>
+  
+    
+  
+  
+  
+  </body></html>
